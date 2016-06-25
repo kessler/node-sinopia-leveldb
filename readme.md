@@ -2,7 +2,7 @@
 
 **a leveldb backed auth plugin for sinopia private npm**
 
-[![npm status](http://img.shields.io/npm/v/sinopia-leveldb.svg?style=flat-square)](https://www.npmjs.org/package/sinopia-leveldb) [![Travis build status](https://img.shields.io/travis/kessler/node-sinopia-leveldb.svg?style=flat-square&label=travis)](http://travis-ci.org/kessler/node-sinopia-leveldb) [![Dependency status](https://img.shields.io/david/kessler/node-sinopia-leveldb.svg?style=flat-square)](https://david-dm.org/kessler/node-sinopia-leveldb)
+[![npm status](http://img.shields.io/npm/v/sinopia-leveldb.svg?style=flat-square)](https://www.npmjs.org/package/sinopia-leveldb) [![Dependency status](https://img.shields.io/david/kessler/node-sinopia-leveldb.svg?style=flat-square)](https://david-dm.org/kessler/node-sinopia-leveldb)
 
 ## example
 
