@@ -1,0 +1,27 @@
+{
+  "name": "sinopia-leveldb",
+  "version": "0.0.1",
+  "description": "a leveldb backed auth plugin for sinopia private npm",
+  "license": "MIT",
+  "author": {
+    "name": "yaniv kessler",
+    "email": "yanivk@gmail.com"
+  },
+  "dependencies": {
+    "level-bytewise": "^1.0.0"
+  },
+  "keywords": [
+    "auth",
+    "leveldb",
+    "npm",
+    "plugin",
+    "sinopia"
+  ],
+  "engines": {
+    "node": ">=4.0.0",
+    "npm": ">=2.0.0"
+  },
+  "repository": "kessler/node-sinopia-leveldb",
+  "bugs": "https://github.com/kessler/node-sinopia-leveldb/issues",
+  "homepage": "https://github.com/kessler/node-sinopia-leveldb"
+}
