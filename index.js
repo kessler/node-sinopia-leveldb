@@ -15,12 +15,11 @@ module.exports = (config, stuff) => {
 	log.warn('sinopia-leveldb - db is at ' + dbPath)
 	
 	let api = createApi(dbPath, log)	
-
-	let controlServer = new ControlServer(api, config.controlServerPort)	
+	let controlServerPort = config.controlServerPort || 4874
+	let controlServer = new ControlServer(api, controlServerPort)	
 	controlServer.start((err) => {
 		if (err) return log.error(err)
-		log.warn('sinopia-leveldb - control server started on port %s', 
-			config.controlServerPort || 4874)
+		log.warn('sinopia-leveldb - control server started on port %s', controlServerPort)
 	})
 
 	return new LevelDBAuth(api)
