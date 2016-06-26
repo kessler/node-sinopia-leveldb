@@ -42,6 +42,8 @@ With a root user, pick any name
 sinopia-leveldb init myuser
 ```
 
+***The cli provide in itself is not secure and is designed to work on the machine that is running sinopia***
+
 ## other cli commands
 
 #### set password
