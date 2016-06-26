@@ -1,6 +1,6 @@
 {
   "name": "sinopia-leveldb",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "a leveldb backed auth plugin for sinopia private npm",
   "license": "MIT",
   "author": {
