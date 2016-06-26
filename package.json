@@ -8,7 +8,14 @@
     "email": "yanivk@gmail.com"
   },
   "dependencies": {
-    "level-bytewise": "^1.0.0"
+    "commander": "^2.9.0",
+    "concat-stream": "^1.5.1",
+    "json-over-tcp": "^0.3.2",
+    "level-bytewise": "^1.0.0",
+    "read": "^1.0.7",
+    "rimraf": "^2.5.2",
+    "unirest": "^0.5.0",
+    "xn": "0.0.4"
   },
   "keywords": [
     "auth",
