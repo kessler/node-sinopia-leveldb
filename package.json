@@ -7,6 +7,9 @@
     "name": "yaniv kessler",
     "email": "yanivk@gmail.com"
   },
+  "bin": {
+    "sinopia-leveldb": "cli.js"
+  },
   "dependencies": {
     "commander": "^2.9.0",
     "concat-stream": "^1.5.1",

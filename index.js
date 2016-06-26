@@ -20,7 +20,7 @@ module.exports = (config, stuff) => {
 	controlServer.start((err) => {
 		if (err) return log.error(err)
 		log.warn('sinopia-leveldb - control server started on port %s', 
-			config.controlServerPort)
+			config.controlServerPort || 4874)
 	})
 
 	return new LevelDBAuth(api)
