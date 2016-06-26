@@ -56,9 +56,13 @@ sinopia-leveldb add-group myuser somegroup
 
 #### list user's groups
 ```
-sinopia-leveldb info myuser
+sinopia-leveldb list myuser
 ```
 
+#### list all users with their groups
+```
+sinopia-leveldb list
+```
 
 ## license
 

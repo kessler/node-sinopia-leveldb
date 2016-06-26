@@ -8,6 +8,7 @@ const xn = require('xn')
 const unirest = require('unirest')
 const hashPassword = require('./lib/hashPassword.js')
 const read = require('read')
+const isArray = require('util').isArray
 
 let rpcClient = new xn.RpcClient({
 	send: (message, callback) => {
@@ -31,8 +32,8 @@ program
 	.command('init [rootUser]')
 	.action(initCommand)
 
-program.command('info [user]')
-	.action(infoCommand)
+program.command('list [user]')
+	.action(listCommand)
 
 program.command('set-password [user] [password]')
 	.action(setPasswordCommand)
@@ -71,12 +72,26 @@ function setPasswordCommand(user) {
 	})
 }
 
-function infoCommand(user) {
+function listCommand(user) {
 	start((rpc) => {
-		rpc.sinopia.getUserEntry(user, (err, userEntry) => {
-			if (err) return fail(err)
-			console.log(`user ${user } is member of these groups: [${userEntry.groups}]`)
-		})
+		if (user) {
+			rpc.sinopia.getUserEntry(user, (err, userEntry) => {
+				if (err) return fail(err)
+				console.log(`user ${user } is member of these groups: [${userEntry.groups}]`)
+			})
+		} else {
+			rpc.sinopia.listUsers((err, result) => {
+				if (err) return fail(err)
+
+				if (isArray(result)) {
+					result.forEach((entry) => {
+						console.log(`user: ${entry.name} - groups: ${entry.groups}`)
+					})
+				} else {
+					console.log('no results')
+				}
+			})
+		}
 	})
 }
 
