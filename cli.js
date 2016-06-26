@@ -35,6 +35,9 @@ program
 program.command('list [user]')
 	.action(listCommand)
 
+program.command('delete [user]')
+	.action(deleteCommand)
+
 program.command('set-password [user] [password]')
 	.action(setPasswordCommand)
 
@@ -117,6 +120,20 @@ function initCommand(rootUser) {
 			if (err) return console.error(err)
 			console.log('initialized successfully')
 		}
+	})
+}
+
+function deleteCommand(user) {
+	start((rpc) => {
+		rpc.sinopia.deleteUser(user, (err, success) => {
+			if (err) return fail(err)
+
+			if (success) {
+				return console.log('user deleted successfully')
+			}
+
+			console.log('failed to delete user')
+		})
 	})
 }
 
