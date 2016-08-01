@@ -1,6 +1,6 @@
 # sinopia-leveldb
 
-**a leveldb backed auth plugin for sinopia private npm**
+**a leveldb backed auth plugin for [sinopia private npm](https://github.com/rlidwka/sinopia)**
 
 - This plugin saves only hashes of the password
 - Plugin comes with an api tool to perform various operations (see below)
